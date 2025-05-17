@@ -12,6 +12,7 @@
     "url": "https://github.com/nozomuikuta/rvpress/issues"
   },
   "homepage": "https://github.com/nozomuikuta/rvpress#readme",
+  "type": "module",
   "packageManager": "pnpm@10.11.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
