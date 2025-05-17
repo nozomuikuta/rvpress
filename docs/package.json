@@ -1,0 +1,13 @@
+{
+  "name": "docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "rvpress dev",
+    "build": "rvpress build",
+    "preview": "rvpress preview"
+  },
+  "devDependencies": {
+    "rvpress": "workspace:*"
+  }
+}

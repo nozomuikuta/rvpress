@@ -12,15 +12,21 @@
     "url": "https://github.com/nozomuikuta/rvpress/issues"
   },
   "homepage": "https://github.com/nozomuikuta/rvpress#readme",
+  "bin": "./bin/rvpress.js",
   "type": "module",
   "packageManager": "pnpm@10.11.0",
   "scripts": {
-    "build": "vite build",
+    "build": "rimraf dist && rollup --config rollup.config.ts --configPlugin esbuild",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "@types/node": "^22.15.18",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5"
+    "rimraf": "^6.0.1",
+    "rollup": "^4.40.2",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "typescript": "^5.8.3"
   }
 }
