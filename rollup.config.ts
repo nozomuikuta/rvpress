@@ -24,6 +24,16 @@ const plugins = [
   json()
 ]
 
+const nodeConfig = defineConfig({
+  input: 'src/node/index.ts',
+  output: {
+    file: 'dist/node/index.js',
+    format: 'esm',
+  },
+  external,
+  plugins,
+})
+
 const cliConfig = defineConfig({
   input: 'src/node/cli.ts',
   output: {
@@ -34,4 +44,4 @@ const cliConfig = defineConfig({
   plugins,
 })
 
-export default defineConfig([cliConfig])
+export default defineConfig([nodeConfig, cliConfig])
